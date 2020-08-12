@@ -1,6 +1,8 @@
 {{--$movie--}}
 <div class="movie-grid-item">
-    <a href="{{route('movies.show'),['id'=>$movie['id']]}}">
+    <a href="{{ route('movies.show',[
+        'movie_id'=>$movie['id']
+    ]) }}">
         <img src="{{asset('https://image.tmdb.org/t/p/w500/').$movie['poster_path']}}" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
     </a>
     <div class="mt-2">
