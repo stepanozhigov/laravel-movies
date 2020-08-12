@@ -28,10 +28,12 @@ class MovieController extends Controller
     }
 
     public function show($movie_id) {
-        $movie = Http::get('https://api.themoviedb.org/3/movie',[
+        $movie = Http::get("https://api.themoviedb.org/3/movie/".$movie_id,[
             'api_key'=>config('services.tmdb.token'),
-            'movie_id'=>$movie_id
+            'append_to_response'=>'credits,videos,images'
+        ])->json();
+        return view('show',[
+            'movie'=>$movie
         ]);
-        return view('show');
     }
 }

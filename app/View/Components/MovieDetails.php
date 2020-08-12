@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class MovieDetails extends Component
 {
+    public $movie;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($movie)
     {
-        //
+        $this->movie = $movie;
     }
 
     /**
@@ -23,6 +24,8 @@ class MovieDetails extends Component
      */
     public function render()
     {
-        return view('components.movie-details');
+        return view('components.movie-details',[
+            'movie'=>$this->movie
+        ]);
     }
 }

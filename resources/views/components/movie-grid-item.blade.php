@@ -1,4 +1,5 @@
 {{--$movie--}}
+{{--$genres--}}
 <div class="movie-grid-item">
     <a href="{{ route('movies.show',[
         'movie_id'=>$movie['id']

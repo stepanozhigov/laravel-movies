@@ -4,17 +4,17 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class CastGridItem extends Component
+class PosterGridItem extends Component
 {
-    public $cast;
+    public $poster;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($cast)
+    public function __construct($poster)
     {
-        $this->cast = $cast;
+        $this->poster = $poster;
     }
 
     /**
@@ -24,6 +24,6 @@ class CastGridItem extends Component
      */
     public function render()
     {
-        return view('components.cast-grid-item',['cast'=>$this->cast]);
+        return view('components.poster-grid-item',['cast'=>$this->poster]);
     }
 }

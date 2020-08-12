@@ -11,7 +11,7 @@
         {{--     MENU       --}}
         <ul class="flex flex-col md:flex-row items-center ml-0 md:ml-8 mb-6 md:mb-0">
             <li class="">
-                <a href="#" class="hover:text-gray-300">Movies</a>
+                <a href="{{route('movies.index')}}" class="hover:text-gray-300">Movies</a>
             </li>
             <li class="md:ml-6">
                 <a href="#" class="hover:text-gray-300">TV Shows</a>
