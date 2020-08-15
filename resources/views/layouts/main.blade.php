@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movie App</title>
     <link rel="stylesheet" href="{{mix('/css/app.css')}}">
+    <livewire:styles />
 </head>
 <body class="font-sans bg-gray-900 text-white">
     <x-nav-bar></x-nav-bar>
     @yield('content')
     <script defer src="https://friconix.com/cdn/friconix.js"> </script>
     @stack('scripts')
+   <livewire:scripts />
 </body>
 </html>

@@ -3,9 +3,7 @@
 @section('content')
     <x-movie-details :movie="$movie">
         @slot('genres')
-            @foreach($movie['genres'] as $genre)
-                {{$genre['name']}}@if (!$loop->last), @endif
-            @endforeach
+            @foreach($movie['genres'] as $genre){{$genre['name']}}@if(!$loop->last),@endif @endforeach
         @endslot
         @slot('crew')
             @foreach(collect($movie['credits']['crew'])->slice(0,5) as $crew)
